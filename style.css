@@ -39,17 +39,16 @@ body {
   z-index: 2; /* Supérieur au z-index du fond pour passer devant */
   color: #fff; /* Ton texte reste 100% opaque et super lisible */
   text-align: center;
+  font-weight: 700;
 }
 
 
 
 a {
-  color: #ffffff; /* Blanc pur */
-  text-decoration: underline; /* Le soulignement indique clairement que c'est un lien */
-  font-weight: bold; /* On l'épaissit pour qu'il ne se perde pas dans l'image */
-  
-  /* L'ASTUCE MAGIQUE : Une petite ombre noire derrière le texte pour le décoller du fond */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+  font-family: Arial, sans-serif; /* Juste pour tester */
+  font-weight: 900;
+  color: #ffffff;
+  /* ... le reste de ton code ... */
 }
 
 /* Effet au survol de la souris */
