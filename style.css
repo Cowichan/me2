@@ -1,7 +1,45 @@
 body {
   font-family: sans-serif; }
 
-.container {
+.mon-conteneur {
+  position: relative; /* Indispensable pour caler le fond par rapport à ce bloc */
+  width: 100%;
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Évite que le fond ne dépasse */
+}
+
+/* Le pseudo-élément qui va porter l'image de fond */
+.mon-conteneur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* Ton image de fond */
+  background-image: url('nevache4.webp'); 
+  background-size: cover; /* L'image couvre tout l'espace proprement */
+  background-position: center; /* L'image est centrée */
+  
+  /* L'opacité que tu as choisie (entre 0 et 1) */
+  opacity: 0.3; 
+  
+  z-index: 1; /* Place le fond en arrière-plan */
+}
+
+/* Le contenu qui doit rester au-dessus */
+.contenu {
+  position: relative;
+  z-index: 2; /* Supérieur au z-index du fond pour passer devant */
+  color: #333333; /* Ton texte reste 100% opaque et super lisible */
+  text-align: center;
+}
+
+/* .container {
   padding: 10vw; }
 
 .text {
@@ -18,10 +56,6 @@ img {
   font-size: 56px;
   margin: 0;
 }
-  /* .memoji .hand {
-    position: absolute;
-    font-size: 13px;
-    margin: 23px 0 0 -15px; } */
 
 h1 {
   font-size: 80px;
@@ -42,4 +76,4 @@ a {
   text-decoration: none; }
   a:hover, a:focus {
     color: #3d1eff;
-    border-color: #3d1eff; }
+    border-color: #3d1eff; } */
