@@ -9,6 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Évite que le fond ne dépasse */
+  background-color: #1a1a1a; 
+
 }
 
 /* Le pseudo-élément qui va porter l'image de fond */
@@ -26,7 +28,7 @@ body {
   background-position: center; /* L'image est centrée */
   
   /* L'opacité que tu as choisie (entre 0 et 1) */
-  opacity: 0.3; 
+  opacity: 0.9; 
   
   z-index: 1; /* Place le fond en arrière-plan */
 }
@@ -35,9 +37,31 @@ body {
 .contenu {
   position: relative;
   z-index: 2; /* Supérieur au z-index du fond pour passer devant */
-  color: #333333; /* Ton texte reste 100% opaque et super lisible */
+  color: #fff; /* Ton texte reste 100% opaque et super lisible */
   text-align: center;
 }
+
+
+
+a {
+  color: #ffffff; /* Blanc pur */
+  text-decoration: underline; /* Le soulignement indique clairement que c'est un lien */
+  font-weight: bold; /* On l'épaissit pour qu'il ne se perde pas dans l'image */
+  
+  /* L'ASTUCE MAGIQUE : Une petite ombre noire derrière le texte pour le décoller du fond */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+}
+
+/* Effet au survol de la souris */
+a:hover {
+  color: #00e5ff; /* Devient cyan lumineux au survol */
+}
+
+/* 
+
+old
+
+*/
 
 /* .container {
   padding: 10vw; }
